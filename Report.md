@@ -18,8 +18,8 @@ Also we have a replay buffer because we receive at each time step a tuple compos
 # Model Architecture
 
 # Hyperparameters
-Our agent was trained using the follwing hyperparameters://
-Buffer size: the size of the experience replay buffer is 10 000//
+Our agent was trained using the follwing hyperparameters:
+Buffer size: the size of the experience replay buffer is 10 000
 Gamma: the discount factor 0.97
 Batch size: 50
 TAU Learning rate coefficient(DDQN): 0.01

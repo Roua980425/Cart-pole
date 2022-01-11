@@ -1,5 +1,7 @@
 # Introduction
-In this project we aim to train the agent to balance a CartPole which is a game in which you try to balance the pole as long as possible. It is assumed that at the tip of the pole, there is an object which makes it unstable and very likely to fall over. The goal of this project is to move the cart left and right so that the pole can stand (within a certain angle) as long as possible.
+In this project we aim to train the agent to balance a CartPole which is a game in which you try to balance the pole as long as possible. It is assumed that at the tip
+of the pole, there is an object which makes it unstable and very likely to fall over. The goal of this project is to move the cart left and right so that the pole
+can stand (within a certain angle) as long as possible.
 the state is represented by 4 values — cart position, cart velocity, pole angle, and the velocity of the tip of the pole — and the agent can take one of two actions at every step — moving left or moving right.
 The longer you keep the pole standing, the more score you will get. The game is over when the pole exceeds 12-degree angle or the cart is going out of the screen.
 # Learning Algorithms
@@ -18,11 +20,15 @@ Also we have a replay buffer because we receive at each time step a tuple compos
 # Model Architecture
 
 # Hyperparameters
-Our agent was trained using the follwing hyperparameters:
-Buffer size: the size of the experience replay buffer is 10 000
-Gamma: the discount factor 0.97
+Our agent was trained using the 
+follwing hyperparameters:
+Buffer size: the size of the experience replay 
+buffer is 10 000
+Gamma: the discount
+factor 0.97
 Batch size: 50
-TAU Learning rate coefficient(DDQN): 0.01
+TAU Learning rate coefficient
+(DDQN): 0.01
 The agent is updated after every 2 time steps
 
 # How to train our Model

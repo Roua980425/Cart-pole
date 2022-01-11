@@ -2,8 +2,8 @@
 In this project we aim to train the agent to balance a CartPole which is a game in which you try to balance the pole as long as possible. It is assumed that at the tip
 of the pole, there is an object which makes it unstable and very likely to fall over. The goal of this project is to move the cart left and right so that the pole
 can stand (within a certain angle) as long as possible.
-the state is represented by 4 values — cart position, cart velocity, pole angle, and the velocity of the tip of the pole — and the agent can take one of two actions at every step — moving left or moving right.
-The longer you keep the pole standing, the more score you will get. The game is over when the pole exceeds 12-degree angle or the cart is going out of the screen.
+\the state is represented by 4 values — cart position, cart velocity, pole angle, and the velocity of the tip of the pole — and the agent can take one of two actions at every step — moving left or moving right.
+\The longer you keep the pole standing, the more score you will get. The game is over when the pole exceeds 12-degree angle or the cart is going out of the screen.
 # Learning Algorithms
 DQN (Deep Q Network):
 There is a problem with Q-Learning, that is the state space is huge. Each small change to the angle of the pole or the velocity of the cart represents a new state. We would need to have a very big memory to store all possible states. This is why Q-Learning by itself is not enough to get the job done. To cope with this problem, we need something to approximate a function that takes in a state-action pair (s,a) and returns the expected reward for that pair. That is when deep learning comes in. It is renowned for approximating a function just from the training data. So we implemented the DQN algorithm.

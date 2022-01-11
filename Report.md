@@ -7,12 +7,15 @@ The longer you keep the pole standing, the more score you will get. The game is 
 # Learning Algorithms
 DQN (Deep Q Network):<br />
 There is a problem with Q-Learning, that is the state space is huge. Each small change to the angle of the pole or the velocity of the cart represents a new state. We would need to have a very big memory to store all possible states. This is why Q-Learning by itself is not enough to get the job done. To cope with this problem, we need something to approximate a function that takes in a state-action pair (s,a) and returns the expected reward for that pair. That is when deep learning comes in. It is renowned for approximating a function just from the training data. So we implemented the DQN algorithm.<br />
-We used replay buffer for training our DQN. It stores the transitions that the agent observes, allowing us to reuse this data later. By sampling from it randomly, the transitions that build up a batch are decorrelated. It has been shown that this greatly stabilizes and improves the DQN training procedure.<br />
-![Pseudo-code-of-DQN-with-experience-replay-method-12](https://user-images.githubusercontent.com/68075541/148843222-5acfd8a8-5b90-4263-81ef-135fe545ee04.png)
+We used replay buffer for training our DQN. It stores the transitions that the agent observes, allowing us to reuse this data later. By sampling from it randomly, the transitions that build up a batch are decorrelated. It has been shown that this greatly stabilizes and improves the DQN training procedure.<br /><br />
+
+![Pseudo-code-of-DQN-with-experience-replay-method-12](https://user-images.githubusercontent.com/68075541/148925603-5ab93cb1-e9f1-4d93-a160-42bca9576355.png)
+
 
 Double DQN:<br />
 The agent uses uses two neural networks to learn and predict what action to take at every step. One network(local network), referred to as the Q network or the online network, is used to predict what to do when the agent encounters a new state(to select actions). And then we used the target network for retrieving the q values since its values are kept steadyas fixed q targets and to break correlations between the predicted and the target value and to update the weights of the target.<br />
-Also we have a replay buffer because we receive at each time step a tuple composed by the state, the action, the reward, and the new state so in order to make our agent learn from the past policies, every tuple is stored in the replay buffer<br />
+Also we have a replay buffer because we receive at each time step a tuple composed by the state, the action, the reward, and the new state so in order to make our agent learn from the past policies, every tuple is stored in the replay buffer<br /><br />
+
 ![1_4B46Bc9EDUdwrnqhAUp7hQ](https://user-images.githubusercontent.com/68075541/148843211-3b531be6-9880-49bf-921b-c344fec22111.png)
 
 

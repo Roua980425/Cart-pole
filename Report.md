@@ -21,7 +21,7 @@ Also we have a replay buffer because we receive at each time step a tuple compos
 
 
 # Model Architecture
-
+We assign it a shape of [None, *state_dim] where and None indicates that the first dimension, corresponding to the batch size, can be of any size.(it tells us simply that that dimension is unspecified, and to infer that dimension from the tensor we are feeding it during run-time (when we run a session).
 # Hyperparameters
 Our agent was trained using the follwing hyperparameters:<br />
 Buffer size: the size of the experience replay buffer is 10 000 <br />
